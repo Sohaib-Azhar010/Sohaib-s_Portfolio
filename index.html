@@ -181,6 +181,7 @@
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6">
+                <!-- JavaScript -->
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
                     <img src="img/brands/js.png" alt="" />
@@ -188,9 +189,10 @@
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6">
+                <!-- TypeScript -->
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
-                    <img src="img/brands/ts.png" alt="" />
+                    <img src="img/typescript.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -211,7 +213,7 @@
               <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
-                    <img src="img/nextjs.png" alt="" style="width: 100px" />
+                    <img src="img/nextjs.png" alt="" style="width: 140px" />
                   </div>
                 </div>
               </div>
@@ -226,6 +228,14 @@
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
                     <img src="img/brands/jq.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <!-- Tailwind CSS (using ts.png) -->
+              <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="single-brand-item d-table">
+                  <div class="d-table-cell text-center">
+                    <img src="img/brands/ts.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -253,21 +263,21 @@
               <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
-                    <img src="img/nestjs.png" alt="" style="width: 100px" />
+                    <img src="img/nestjs.png" alt="" style="width: 140px" />
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
-                    <img src="img/nodejs.png" alt="" style="width: 100px" />
+                    <img src="img/nodejs.png" alt="" style="width: 140px" />
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
-                    <img src="img/expressjs.png" alt="" style="width: 80px" />
+                    <img src="img/expressjs.png" alt="" style="width: 120px" />
                   </div>
                 </div>
               </div>
@@ -288,7 +298,7 @@
               <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="single-brand-item d-table">
                   <div class="d-table-cell text-center">
-                    <img src="img/postgresql.png" alt="" style="width: 80px" />
+                    <img src="img/postgresql.png" alt="" style="width: 160px" />
                   </div>
                 </div>
               </div>
@@ -466,24 +476,24 @@
       .full-width-div {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         border: 4px solid #854fee;
         border-style: groove;
         padding: 20px;
-        min-height: 250px;
-        margin-top: 5%;
+        height: 100%;
+        margin-bottom: 30px;
       }
 
       .carousel-container {
-        width: 40%;
+        width: 100%;
       }
 
       .description-container {
-        width: 60%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+        flex-grow: 1;
+        padding: 20px 0 0 0;
       }
 
       .buton {
@@ -493,26 +503,20 @@
         outline: none;
         border: none;
         color: white;
-        padding: 0; /* Reset padding */
+        padding: 0;
         text-align: center;
-        display: flex; /* Use flexbox for centering */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
         height: 40px;
-        line-height: 40px; /* Vertically align text if needed */
+        line-height: 40px;
+        margin-top: auto;
       }
 
       .buton:hover {
         background-color: #844feede;
         color: white;
-      }
-
-      @media (max-width: 768px) {
-        .carousel-container,
-        .description-container {
-          width: 100%;
-        }
       }
     </style>
     <!--================Start Portfolio Area =================-->
@@ -526,428 +530,320 @@
           </div>
         </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="img/trans.png"
-                    class="d-block w-100"
-                    alt="Image 1"
-                  />
+        <div class="row">
+          <!-- Trektoo Project -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="projectTrektooCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/trektoo-img.png" class="d-block w-100" alt="Trektoo" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  <strong>Trektoo</strong> is a sophisticated booking platform for hotels and activities, designed to streamline travel planning. Built with Next.js for a high-performance frontend and Laravel for a robust backend, it features a seamless user experience for discovering and booking world-class travel services.
+                </p>
+                <a href="https://trektoo.com/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              A real estate platform enabling agents and assistants to
-              collaborate in helping users find homes. Integrated advanced
-              analytics and secure Stripe payments. It features a comprehensive
-              admin panel for efficient management, along with an integrated
-              mailing service for seamless communication.
-            </p>
-            <a
-              href="https://transparagent.com/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/shop.png" class="d-block w-100" alt="Image 1" />
+          <!-- Project 1 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project1Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/trans.png" class="d-block w-100" alt="Transparagent" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  A real estate platform enabling agents and assistants to collaborate in helping users find homes. Integrated advanced analytics and secure Stripe payments. It features a comprehensive admin panel for efficient management.
+                </p>
+                <a href="https://transparagent.com/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end, and Django for the back-end. It features a
-              comprehensive admin panel for efficient management, along with an
-              integrated mailing service for seamless communication.
-            </p>
-            <a
-              href="https://shopitnow.online/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/life.png" class="d-block w-100" alt="Image 1" />
+          <!-- Project 2 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project2Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/shop.png" class="d-block w-100" alt="ShopItNow" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  This project is a robust web application developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end. It features a comprehensive admin panel for efficient management and order tracking.
+                </p>
+                <a href="https://shopitnow.online/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end, and Django for the back-end. It features a
-              comprehensive admin panel for efficient management, along with an
-              integrated mailing service for seamless communication.
-            </p>
-            <a href="https://lifequality.jo/" class="buton mt-3" target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="img/kylin.png"
-                    class="d-block w-100"
-                    alt="Image 1"
-                  />
+          <!-- Project 3 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project3Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/life.png" class="d-block w-100" alt="Life Quality" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  This project is a robust web application developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end. It features a comprehensive admin panel for efficient management and user coordination.
+                </p>
+                <a href="https://lifequality.jo/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end, and Django for the back-end. It features a
-              comprehensive admin panel for efficient management, along with
-              PayPal integration for seamless transactions.
-            </p>
-            <a
-              href="https://kylinoracle.com/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p9.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 4 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project4Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/kylin.png" class="d-block w-100" alt="Kylin Oracle" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  This project is a robust web application developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end. It features a comprehensive admin panel and PayPal integration for transactions.
+                </p>
+                <a href="https://kylinoracle.com/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end, and Django for the back-end. It features a
-              comprehensive admin panel for efficient management, along with an
-              integrated mailing service for seamless communication.
-            </p>
-            <a href="https://byzino.com/" class="buton mt-3" target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/l1.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 5 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project5Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p9.PNG" class="d-block w-100" alt="Byzino" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  This project is a robust web application developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end. It features a comprehensive admin panel for efficient management and site coordination.
+                </p>
+                <a href="https://byzino.com/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end, and PHP with Laravel for the back-end. It features
-              a comprehensive admin panel for efficient management, along with
-              an integrated mailing service for seamless communication.
-            </p>
-            <a
-              href="https://thelanguageacademy.org/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p1.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 6 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project6Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/l1.PNG" class="d-block w-100" alt="Language Academy" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  This project is a robust web application developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end, and PHP with Laravel for the back-end. It features a comprehensive admin panel.
+                </p>
+                <a href="https://thelanguageacademy.org/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It has been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/FirstBootsrap/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p2.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 7 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project7Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p1.PNG" class="d-block w-100" alt="Practice Project" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  This project is a robust web application developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end. It has been made just for the practice purpose.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/FirstBootsrap/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It has been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/sohaibsrestraunt/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p3.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 8 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project8Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p2.PNG" class="d-block w-100" alt="Restaurant Site" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  A robust restaurant management template developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end. It features an elegant menu and table booking interface.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/sohaibsrestraunt/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It's a simple and responsive weather app made by
-              using Weather API. It has been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/Weather-website/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p4.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 9 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project9Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p3.PNG" class="d-block w-100" alt="Weather Website" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  A simple and responsive weather app made by using Weather API. It features real-time weather updates, location tracking, and a clean, responsive design for practice purposes.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/Weather-website/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is an e-commerce template developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It has been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/E-commerce_website/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p5.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 10 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project10Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p4.PNG" class="d-block w-100" alt="E-commerce Website" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  An e-commerce template developed using a combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for the front-end. It demonstrates advanced layout and grid styling.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/E-commerce_website/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It's a simple and responsive currency converter app
-              made by using API. It has been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/currency_converter/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p6.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 11 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project11Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p5.PNG" class="d-block w-100" alt="Currency Converter" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  A simple and responsive currency converter app made by using API. It features real-time exchange rates and a clean user interface for quick calculations.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/currency_converter/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It's a simple and responsive Spotify Clone App. It
-              has been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/Spotify_Clone/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p7.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 12 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project12Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p6.PNG" class="d-block w-100" alt="Spotify Clone" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  A simple and responsive Spotify Clone App. This project mimics the core UI of Spotify, demonstrating advanced CSS and layout skills.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/Spotify_Clone/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It's a simple and responsive E-Book Library. It has
-              been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/Simple_Library_Manager/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
-          </div>
-        </div>
 
-        <div class="container-fluid full-width-div">
-          <div class="carousel-container">
-            <div
-              id="carouselExample"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/p8.PNG" class="d-block w-100" alt="Image 1" />
+          <!-- Project 13 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project13Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p7.PNG" class="d-block w-100" alt="E-Book Library" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  A simple and responsive E-Book Library manager. It features a clean organized interface for browsing and managing your digital book collection.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/Simple_Library_Manager/" class="buton mt-3" target="_blank">Click to View</a>
               </div>
             </div>
           </div>
-          <div class="description-container">
-            <p>
-              This project is a robust web application developed using a
-              combination of HTML, CSS, JavaScript, jQuery, and Bootstrap for
-              the front-end. It's a simple and responsive Sample Portfolio
-              Website. It has been made just for the practice purpose.
-            </p>
-            <a
-              href="https://sohaib-azhar010.github.io/Simple_Portfolio/"
-              class="buton mt-3"
-              target="_blank"
-              >Click to View</a
-            >
+
+          <!-- Project 14 -->
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="full-width-div">
+              <div class="carousel-container">
+                <div id="project14Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/p8.PNG" class="d-block w-100" alt="Sample Portfolio" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="description-container">
+                <p>
+                  A simple and responsive Sample Portfolio Website. This project serves as a clean template for showcasing professional work and skills.
+                </p>
+                <a href="https://sohaib-azhar010.github.io/Simple_Portfolio/" class="buton mt-3" target="_blank">Click to View</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
