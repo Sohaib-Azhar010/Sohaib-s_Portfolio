@@ -345,7 +345,7 @@ button:focus {
 ============================================================================================ */
 .home_banner_area {
   z-index: 1;
-  /* background: url(../img/banner/home-banner.png) no-repeat top center; */
+  padding-top: 100px; /* Added to lower the entire hero content including "HELLO" */
   background-position: center;
   background-size: cover; }
   .home_banner_area .banner_inner {
@@ -3318,4 +3318,23 @@ h6 {
   z-index: -1;
   pointer-events: none;
   background: transparent;
+}
+#led-monitor-canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.home_right_img {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px !important;
+}
+
+@media (max-width: 991px) {
+    .home_right_img {
+        display: none;
+    }
 }
